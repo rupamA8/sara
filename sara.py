@@ -102,8 +102,15 @@ if __name__ =="__main__":
                 print(e)
                 speak("sorry email has been not sent")
 
-
-
-
+        elif 'google search for' in  query:
+            query = query.replace('search google for', " ")
+            speak(f"      {query}")
+            url="https://www.google.com/search?q="+query
+            webbrowser.open(url)
+        elif 'youtube play videos of' in query:
+            query = query.replace('youtube play videos of', " ")
+            speak(f'          {query}')
+            url = 'https://www.youtube.com/results?search_query='+query
+            webbrowser.open(url)
 
 
